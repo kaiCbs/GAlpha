@@ -1,7 +1,3 @@
-import pandas as pd
-import numpy as np
-
-
 class Preprocess:
     
     def __init__(self):
@@ -9,7 +5,7 @@ class Preprocess:
     
     @classmethod
     def rank(cls, df):
-        return df.rank()
+        return df.rank() / df.shape[0]
     
     @classmethod
     def fillna_with_time_series_mean(cls, df):

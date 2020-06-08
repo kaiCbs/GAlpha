@@ -30,8 +30,16 @@ class NK_NK:
     
     @classmethod
     def prod(cls, df1, df2):
+        df1.columns = df2.columns
         return df1 * df2
     
     @classmethod
     def sum(cls, df1, df2):
+        df1.columns = df2.columns
+        return df1 + df2
+    
+    
+    @classmethod
+    def sum(cls, df1, df2):
+        df1.columns = df2.columns
         return df1 + df2
