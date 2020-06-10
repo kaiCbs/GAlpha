@@ -68,7 +68,7 @@ if __name__ == "__main__":
     
     mostCorrelated, top5Correlated, ir, bp = agent.review()
     
-    if mostCorrelated < 0.8 and top5Correlated < 0.7 and ir > 0.1 and bp > 4:
+    if mostCorrelated < 0.75 and top5Correlated < 0.65 and ir > 0.15 and bp > 4:
         print("\n\n",parents,"\n",agent.review())
         with open(agent.candidate + "/{}-{}.txt".format(agent.childName, agent.log_time), "w") as output:
             print(parents, agent.review(), agent.log_time, "\n\n", agent.simResult, "\n\n", agent.corrReport, file=output)
